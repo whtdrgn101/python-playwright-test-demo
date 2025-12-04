@@ -1,0 +1,29 @@
+{
+    "schemas": [
+          "urn:scim:schemas:core:1.0",
+          "urn:scim:schemas:extension:enterprise:1.0",
+          "urn:scim:schemas:extension:custom:1.0"
+      ],
+      "uid": "{{ uid }}",
+      "userPassword": "{{ userPassword }}",
+      "name": {
+          "givenName": "{{ givenName }}",
+          "sn": "{{ sn }}"
+      },
+      "telephoneNumber": [
+          {
+              "value": "{{ telephoneNumber }}",
+              "type": "{{ telephoneType }}"
+          }
+      ],
+      "description": "testUser",
+      "urn:scim:schemas:extension:custom:1.0": {
+          "emailAddress": "{{ emailAddress }}",
+          "initials": "ck",
+          "wfPwdNeverExpire": true,
+          "wfEntitlement": "{ \"subject\":{ \"userId\":\"{{ emailAddress }}\" }, \"policyEntitlements\":[ { \"policyNumber\":\"0000000\", \"operations\":[ { \"create\":false, \"read\":false, \"update\":false, \"delete\":false } ] } ], \"billingEntitlements\":[ { \"billingAccountNumber\":\"unknown\", \"operations\":[ { \"create\":false, \"read\":false, \"update\":false, \"delete\":false } ] } ], \"userProfileEntitlements\":[ { \"userId\":\"generic@generic.com\", \"operations\":[ { \"create\":false, \"read\":false, \"update\":false, \"delete\":false } ] } ] }",
+          "wfCRMId": "23862",
+          "isAccountDisabled": true
+      }
+  }
+  
